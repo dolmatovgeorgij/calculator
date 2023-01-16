@@ -53,7 +53,7 @@
 .btn.zero{
 grid-area: zero;
 width: 100%;
-border-radius: 3 4px;
+border-radius: 34px;
 }
 
 .btn:hover{
