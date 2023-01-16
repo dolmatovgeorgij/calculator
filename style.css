@@ -1,74 +1,72 @@
-*,*:before,*:after{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-:focus :active{outline: none;}
-a:focus,a:active{outline: none;}
-
-nav,footer,header,aside{display: block;}
-
-
-input,button,textarea{font-family: inherit;}
-
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding: 0;border: 0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-
-h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
-
-
-body{
-  display: flex;
-  justify-content: center;
-  font-size: 35px;
-  
-  
-    
+.calc{
+  margin: 50px auto;
+  width: 300px;
+  height: 500px;
+  /*border:5xp solid #000;*/
+  border-radius: 20px;
+  background-color: #000;
+  color: #fff;
+  font-family: arial;
+  padding: 18px;
+  box-shadow: 4px 4px 4px #4f4f4f;
 }
 
+.screen-calc{
+  height: 125px;
+  padding: 10px;
+  display: grid;
+  justify-items: end;
+  align-items: end;
+}
 
-.wrapper {
-  background-color: red;
-  padding: 20px;
+.screen-calc p{
+   text-align: right;
+   font-size: 4rem;
+   margin: 0;
 }
-.screen { background-color: blueviolet;
-  padding: 4px;
-}
-.wrapper-clava-calc { 
-  padding: 0;
 
+.buttons{
+  display: grid;
+  grid-template-areas: 
+  "ac plus-minus percent division"
+  "seven eight nine multi"
+  "four five six minus"
+  "one two three plus"
+  "zero zero dot equal";
+  grid-gap:7px;
+  justify-items: center ;
+}
 
+.btn{
+  width: 60px;
+  height: 60px;
+  background: #333;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;  
 }
-.line-clava {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
+
+.btn.zero{
+grid-area: zero;
+width: 100%;
+border-radius: 3 4px;
 }
-.button {
-  background-color: cadetblue;
-  justify-content: center;
-  font-size: inherit;
- 
-  
+
+.btn:hover{
+  filter: brightness(120%);
 }
-.line-clava-2 {
-  padding: 0;
-   display: flex;
-  justify-content: space-between;
-  padding: 0;
-  
+
+.btn:active{
+  filter: brightness(90%);
 }
-.line-clava-3 {
-  padding: 0;
-   display: flex;
-  justify-content: space-between;
-  padding: 0;
+
+.btn.bg-grey{
+  background: #a6a6a6;
 }
-.line-clava- {
-  padding:0;
+
+.btn.bg-orange{
+  background: #ff9501;
 }
